@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demostracion 04</title>
+</head>
+<body>
+    <!-- cuadro de dialogo-->
+    <!-- colocar open para visualizar el cuadro-->
+    <dialog id="modal" >
+        <h2>Curso de html 5 desde cero</h2>
+        <p>Precio: xxxx</p>
+        <p>Profesor: Juan Jose Leon S.</p>
+        <p>Horario: xxxx</p>
+    </dialog>
+    <button id="button">Abrir modal</button>
+    <button id="close">Cerrar</button>
+
+    <script type="text/javascript">
+        const modal= document.getElementById('modal');
+        const button= document.getElementById('button');
+        const close=document.getElementById('close');
+        //al hacer clik en abrir modal, se abrira el cuadro
+        button.addEventListener('click',()=>{
+            modal.setAttribute('open','true');
+        })
+        close.addEventListener('click',()=>{
+            modal.removeAttribute('open');
+        })
+
+    </script>
+    
+</body>
+</html>

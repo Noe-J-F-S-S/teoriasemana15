@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lsita de datos</title>
+</head>
+<body>
+    <!--Validacion de datos-->
+    Ingresar el valor: <input type="text" id="caja">
+    <button onclick="mifuncion();">Enviar</button>
+    <div id="info">
+
+    </div>
+    <script>
+        //ingresar un valor numericoentre  1 y 8
+        function mifuncion(){
+            var texto;
+            var numero=document.getElementById('caja').value;
+            if (numero < 1 || numero > 8 || isNaN(numero)){
+                texto="<span style='color:red'> Input no valido </span>";
+            }else
+            {
+                texto="<span style='color:green'> Input  valido </span>";
+            }
+            document.getElementById('info').innerHTML=texto;
+        }
+    </script>
+</body>
+</html>

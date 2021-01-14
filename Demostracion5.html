@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video mediante javascript</title>
+</head>
+<body>
+    <h1>Multimedia - videos</h1>
+    <video id="video" src="rem.mp4" controls autoplay width="600" height="300">
+
+    </video>
+    <button id="play">Play</button>
+    <button id="pausa">Pausa</button>
+
+    <script type="text/javascript">
+        const video= document.getElementById('video');
+        const play= document.getElementById('play');
+        const pausa=document.getElementById('pausa');
+        //al hacer clik en abrir modal, se abrira el cuadro
+        // ( ) => significa incluir
+        play.addEventListener('click',()=>{
+            video.play();
+        })
+        pausa.addEventListener('click',()=>{
+            video.pause();
+        })
+    </script>
+</body>
+</html>

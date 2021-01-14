@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo de formularios</title>
+</head>
+<body>
+    <!--La importancia del GET y SET -->
+    <form method="GET" >
+        <p>
+            <h2>--Botones de opcion</h2>
+            <!--Botones de opciones-->
+                <!--Para que un grupo de opcione trabaje con la seleccion de un dato deben llevar el mismo nombre-->
+                <input type="radio" name="Experiencia" value="Junior">Junior <br>
+                <input type="radio" name="Experiencia" value="Joven">Joven <br>
+                <input type="radio" name="Experiencia" value="Adulto">Adulto <br>
+                <input type="radio" name="Experiencia" value="Ninguno">Ninguno <br>
+            <!--Casillas vacias de verificacion-->
+                <!--Nombre de los controles diferentes, para poder seleccionar uno o varios-->
+                <p>
+                    <h2>Casillas</h2>
+                <input type="checkbox" name="futbol">Futbol <br>
+                <input type="checkbox" name="beisbol">Beisbol <br>
+                <input type="checkbox" name="voleybol">Voleybol <br>
+                <input type="checkbox" name="otros">Otros <br>
+                </p>
+            <!--Buscador-->
+            <p>
+                <label for="">Buscador</label>
+                <input list="buscar">
+                <!--definir el contenido de la lista-->
+                <datalist id= "buscar"    >
+                    <option >Azul</option>
+                    <option >Rojo</option>
+                    <option >Verde</option>
+                    <option >Blanco</option>
+                </datalist>
+            </p>
+
+            <!--Busqueda de archivos-->
+            <p>
+                <!--input que  permite cargar un tipo de archivo-->
+                <!--tipos de archivos a utilizar : accept-->
+                <!--image/*:para tipo de img de cualquier formato  -->
+                <input type="file" name="archivo" accept=" .pdf,image/*">
+            </p>
+        </p>
+    </form>
+</body>
+</html>

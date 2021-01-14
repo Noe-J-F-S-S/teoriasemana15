@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validacion del lado del lado del cliente</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <h1>validacion de formulario</h1>
+    <div id="info"></div>
+    <div class="caja">
+        <form  name="miform" action="principal.html" method="POST" onsubmit="return validarformulario();">
+            <table class="tabla">
+                <tr>
+                    <td class="titulo" >Usuario</td>
+                    <td> <input class="texto" type="text" name="nombre"> </td>
+                </tr>
+                <tr>
+                    <td class="titulo">Password</td>
+                    <td> <input type="password" name="password"> </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="btn"><input class="boton" type="submit" value="Enviar datos"></td>
+                </tr>
+            </table>
+        </form>
+        <script>
+            function validarformulario(){
+                var texto;
+                var usuario=document.forms['miform']['nombre'].value;
+
+                if (ususario ==null || usuario==""){
+                    texto="<span style='color:red'> ingresar el nombre del usuario </span>";
+                    document.getElementById('info').innerHTML=texto;
+                    return false;
+
+                }else if (usuario.length<5)
+                {
+                    texto="<span style='color:red'> usuario debe tener 5 caracteres </span>";
+                    document.getElementById('info').innerHTML=texto;
+                    return false;
+                }
+                
+
+            }
+        </script>
+
+    </div>
+</body>
+</html>
